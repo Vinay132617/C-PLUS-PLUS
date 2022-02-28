@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int no_of_rooms{0};
+    int price_per_room{100};
+    int days{30};
+    double tax{0.06};
+    
+    cout<<"WELCOME TO VINAY'S CARPET CLEANING SERVICES"<<endl;
+    cout<<"============================================="<<endl;
+    
+    cout<<"How many rooms would you like to clean : ";
+    cin>>no_of_rooms;
+    
+    cout<<"Estimate for carpet cleaning"<<endl;
+    cout<<"Number of rooms : "<< no_of_rooms << endl;
+    cout<<"Price per room  : "<< price_per_room << endl;
+    cout<<"Cost for rooms  : "<< no_of_rooms * price_per_room <<endl;
+    cout<<"Tax for cost    : "<< no_of_rooms * price_per_room * tax<<endl;
+    
+    cout<<"============================================="<<endl;
+    
+    cout<<"Total cost      : "<< no_of_rooms * price_per_room + no_of_rooms * price_per_room * tax<<endl;
+    cout<<"This service is valid for " << days << " days."<<endl;
+    
+    
+    
+    
+    
+    
+    
+    return 0;
+}
