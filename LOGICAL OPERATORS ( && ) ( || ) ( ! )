@@ -1,0 +1,56 @@
+//  LOGICAL OPERATORS ( && ) ( || ) ( ! )
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    int num{0};
+    
+    const int lower_bound{10};
+    const int upper_bound{20};
+    bool within_bounds{false};
+    
+    cout<<boolalpha;
+    cout<<"==WITHIN BOUNDS== "<<endl;
+    cout<<"Enter the number within bounds : ";
+    cin>>num;
+    
+    within_bounds = num > lower_bound && num < upper_bound;
+    
+    cout<<num<<" is between "<<lower_bound<<" & "<<upper_bound<<" : "<<within_bounds<<endl<<endl;;
+    cout<<"=================================================="<<endl<<endl;
+    
+    int num1{0};
+    
+    const int lower_bound1{10};
+    const int upper_bound1{20};
+    bool outof_bounds1{false};
+    
+    
+    cout<<"==OUTSIDE BOUNDS== "<<endl;
+    cout<<"Enter the number out of the bounds : ";
+    cin>>num1;
+    
+    outof_bounds1 = num1 < lower_bound1 || num1 > upper_bound1;
+    
+    cout<<num1<<" is out of "<<lower_bound1<<" & "<<upper_bound1<<" : "<<outof_bounds1<<endl<<endl;
+    cout<<"=================================================="<<endl<<endl;
+    
+    int num2{0};
+    
+    const int lower_bound2{10};
+    const int upper_bound2{20};
+    bool on_bounds1{false};
+    
+    
+    cout<<"==ON BOUNDS== "<<endl;
+    cout<<"Enter the number On bounds : ";
+    cin>>num2;
+    
+    on_bounds1 = (num2 ==  lower_bound2) || (num2 == upper_bound2);
+    
+    cout<<num2<<" is on "<<lower_bound2<<" or "<<upper_bound2<<" : "<<on_bounds1<<endl<<endl;
+    cout<<"=================================================="<<endl<<endl;
+    
+}
