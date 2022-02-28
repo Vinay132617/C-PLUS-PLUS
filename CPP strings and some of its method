@@ -1,0 +1,158 @@
+// Example program
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string s0;
+    string s1{"Apple"};
+    string s2{"Banana"};
+    string s3{"Kiwi"};
+    string s4{"apple"};
+    string s5{s1};
+    string s6{s1,0,3};
+    string s7(10,'X');
+    
+    cout<<s0<<endl;
+    cout<<s0.length()<<endl;
+    cout<<"-----------------------------------"<<endl;
+    
+    
+    //INITIALIZATION
+    
+    cout<<"s1 is initialized to : "<<s1<<endl;
+    cout<<"s2 is initialized to : "<<s2<<endl;
+    cout<<"s3 is initialized to : "<<s3<<endl;
+    cout<<"s4 is initialized to : "<<s4<<endl;
+    cout<<"s5 is initialized to : "<<s5<<endl;
+    cout<<"s6 is initialized to : "<<s6<<endl;
+    cout<<"s7 is initialized to : "<<s7<<endl;
+    cout<<"-----------------------------------"<<endl;
+    
+    
+    //COMPARISION
+    
+    cout<<boolalpha;
+    cout<<"COMPARISION"<<endl;
+    cout<<s1<<" == "<<s5<<" : "<<(s1==s5)<<endl;
+    cout<<s1<<" == "<<s2<<" : "<<(s1==s2)<<endl;
+    cout<<s1<<" != "<<s2<<" : "<<(s1!=s2)<<endl;
+    cout<<s1<<" < "<<s2<<" : "<<(s1<s2)<<endl;
+    cout<<s2<<" > "<<s1<<" : "<<(s2>s1)<<endl;
+    cout<<s2<<" < "<<s1<<" : "<<(s2<s1)<<endl;
+    cout<<s4<<" < "<<s5<<" : "<<(s4<s5)<<endl;
+    cout<<s4<<" > "<<s5<<" : "<<(s4>s5)<<endl;
+    cout<<s1<<" == Apple"<<" : "<<(s1=="Apple")<<endl;
+    cout<<"-----------------------------------"<<endl;
+    
+    //ASSIGNMENT
+    
+    cout<<"ASSIGNMENT"<<endl;
+    s1 = "Watermelon";
+    cout<<"s1 is now : "<<s1<<endl;
+    
+    s2 = s1;
+    cout<<"s2 is now : "<<s2<<endl;
+    s3 = "Frank";
+    cout<<"s3 is now : "<<s3<<endl;
+    
+    s3[0] = 'C';
+    cout<<"s3 change the first letter to c : "<<s3<<endl;
+    
+    s3[0] = 'P';
+    cout<<"s3 change first leter to p : "<<s3<<endl;
+    cout<<"-----------------------------------"<<endl;
+    
+    //CONCATENATION
+    
+    cout<<"CONCATENATION"<<endl;
+    s3 = "Watermelon";
+    
+    s3 = s2 + " and " + s5 + " juice....";
+    
+    cout<<"s3 is now : "<<s3<<endl;
+    cout<<"-----------------------------------"<<endl;
+    
+    //LOOPING
+    
+    cout<<"LOOPING"<<endl;
+    
+    for(size_t i{0}; i < s1.length(); ++i )
+        cout<<s1.at(i);
+    cout<<endl;
+    cout<<"-----------------------------------"<<endl;
+    
+    cout<<"\nRANGE BASED LOOPING"<<endl;
+    
+    for(char c: s4)
+        cout<<c;
+    cout<<endl;
+    cout<<"-----------------------------------"<<endl;
+    
+    //SUBSTRING
+    
+    cout<<"SUBSTRING"<<endl;
+    
+    string a1 {"My name is vinay"};
+    
+    cout<<a1.substr(0,2)<<endl;
+    cout<<a1.substr(3,4)<<endl;
+    cout<<a1.substr(8,2)<<endl;
+    cout<<a1.substr(11,5)<<endl;
+    cout<<"-----------------------------------"<<endl;
+    
+    //ERASE
+    
+    cout<<"ERASE"<<endl;
+    
+    cout<<a1.erase(0,3)<<endl;
+    cout<<a1.erase(3,4)<<endl;
+    cout<<a1.erase(8,2)<<endl;
+    
+    s1.clear();
+    
+    cout<<s1<<endl;
+    cout<<"-----------------------------------"<<endl;
+    
+    //GETLINE
+    
+    cout<<"GETLINE"<<endl;
+    
+    string full_name{};
+    
+    cout<<"Enter you full name : ";
+    getline(cin,full_name);
+    
+    cout<<"your full name is "<<full_name<<endl;
+    cout<<"-----------------------------------"<<endl;
+    //FIND
+    
+    cout<<"FIND"<<endl;
+    
+    string a2{"Volleyball is my fav game"};
+    string word{};
+    
+    cout<<"Enter the word you want to find : "<<endl;
+    cin>>word;
+    
+    size_t position = a2.find(word);
+    
+    if(position != string::npos)
+        cout<<"Found "<<word<<" at position : "<<position<<endl;
+    else
+        cout<<"Sorry "<<word<<" not found!"<<endl;
+    
+    cout<<endl;
+    
+    return 0;
+    
+    }
+
+
+
+
+
+
+
