@@ -1,0 +1,35 @@
+// RECURSION (FIBONACCI AND FACTORIAL EXAMPLE)
+#include <iostream>
+
+using namespace std;
+
+unsigned long long factorial(unsigned long long n) {
+        if (n == 0)
+            return 1;
+        return n * factorial(n-1);
+}
+
+unsigned long long fibonacci(unsigned long long n) {
+        if (n <= 1)
+            return n;
+        return fibonacci(n-1) + fibonacci(n-2);
+}
+
+int main()
+{
+    cout<<"----------RECURSION (FIBONACCI AND FACTORIAL EXAMPLE)----------"<<endl<<endl;
+    
+    int num{};
+    cout<<"Enter num  : ";
+    cin>>num;
+    
+    cout<<"\nFACTORIAL"<<endl;
+   
+    cout<<"The factorial of "<<num<<" : "<<factorial(num)<<endl;
+   
+    cout<<"\nFIBONACCI"<<endl;
+    
+    cout<<"The fibonacci of "<<num<<" : "<<fibonacci(num)<<endl;
+   
+   return 0;
+}
