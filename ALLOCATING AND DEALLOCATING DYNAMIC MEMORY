@@ -1,0 +1,28 @@
+// ALLOCATING AND DEALLOCATING DYNAMIC MEMORY
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    
+    cout<<"ALLOCATING AND DEALLOCATING DYNAMIC MEMORY"<<endl;
+    cout<<"---------------------------------------------"<<endl;
+    
+    int *vinaypointer{nullptr};
+    vinaypointer = new int;                 // allocated
+    cout<<vinaypointer<<endl;
+    delete vinaypointer;     //free allocated storage
+    
+    cout<<"---------------------------------------------"<<endl;
+    int size{};
+    double *spointer{nullptr};
+    cout<<"how many temps? ";
+    cin>>size;
+    
+    spointer = new double [size];   //alloating
+    
+    cout<<spointer<<endl;
+    
+    delete[] spointer;    //free allocated storage
+}
