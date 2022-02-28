@@ -1,0 +1,27 @@
+// Example program
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    char selection{};
+    
+    do{
+        double width{}, height{};
+        cout<<"Enter width and height seperated by spaces : ";
+        cin>>width>>height;
+        
+        double area{};
+        area = width * height;
+        
+        cout<<"the area is "<<area<<endl;
+        
+        cout<<"calculate another Y/N : ";
+        cin>>selection;
+        
+    }
+    while(selection == 'y'|| selection == 'Y');
+    cout<<"Thanks!"<<endl;
+}
