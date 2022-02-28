@@ -1,0 +1,38 @@
+// FUNCTIONS AND ARRAYS
+#include <iostream>
+
+using namespace std;
+
+void print_arr();
+void print_arr(int numbers[], size_t size);
+void set_arr(int numbers[], size_t size, int value);
+
+
+int main()
+{
+  int my_scores[]{100,90,80,70,60,50};
+  
+  print_arr();
+  print_arr(my_scores, 6);
+  set_arr(my_scores, 6 , 100);
+  print_arr(my_scores, 6);
+}
+
+void print_arr()
+{
+   cout<<"FUNCTIONS AND ARRAYS......"<<endl<<endl; 
+}
+
+
+void print_arr(int numbers[], size_t size)
+{
+    for(size_t i{0}; i < size ; ++i)
+        cout<< numbers[i]<<" ";
+    cout<<endl;
+}
+
+void  set_arr(int numbers[], size_t size, int value)
+{
+    for(size_t i{0}; i < size ; ++i)
+        numbers[i] = value;
+}
