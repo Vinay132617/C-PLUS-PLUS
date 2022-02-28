@@ -1,0 +1,80 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+int main()
+{
+    /*for(int i{1}; i <= 10 ; ++i)
+    {
+        for(int j{1}; j <= 10; ++j)
+            cout<<i<<" "<<"*"<< " "<<j<< " "<<"= "<<i*j<<endl;
+        cout<<"-------------------------------"<<endl;
+    }*/
+    
+    int num_items{};
+    
+    cout<<"how many number of items you want?  ";
+    cin>>num_items;
+    
+    vector<int>data{};
+    
+    for(int i{1}; i <= num_items ; ++i)
+    {
+        int data_item{};
+        cout<<"Enter data item "<<i<<" : ";
+        cin>>data_item;
+        data.push_back(data_item);
+    }
+    
+    cout<<"\nDISPLAYING HISTOGRAM...."<<endl;
+    for(auto val : data)
+    {
+        for(int i{1}; i <= val ; ++i)
+        {
+            if(i%5==0)
+                cout<<"*";
+            else
+                cout<<"-";
+        
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    
+    
+    /*vector<vector<int>> vec_2d
+    {
+        {1,2,3},
+        {10,20,30,40},
+        {100,200,300,400,500}
+    };
+     
+     for (auto vec : vec_2d)
+     {
+         for (auto val : vec)
+        {
+            cout<<val<<" ";
+        }
+        cout<<endl;
+     }*/
+     
+    /*int grid[5][3]{};
+     
+    for(int i{0} ; i < 5 ; ++i)
+    {
+        for(int j{0} ; j < 3 ; ++j)
+        {
+            grid[i][j] = 1000;   
+        }
+    }
+     
+    for(int i{0} ; i < 5 ; ++i)
+    {
+        for(int j{0} ; j < 3 ; ++j)
+        {
+            cout<<grid[i][j]<<" ";   
+        }
+        cout<<endl;
+    }*/
+}
