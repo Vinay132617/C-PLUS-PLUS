@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const double rupees_per_usd{76.16};
+    cout<<"WELCOME TO DOLLARS TO RUPEES CONVERTER"<<endl;
+    cout<<"Enter dollars: ";
+    
+    double rupees{0.0};
+    double dollar{0.0};
+    
+    cin>> dollar;
+    
+    rupees = dollar*rupees_per_usd;
+    
+    cout<<dollar<<" dollars is equivalent to "<< rupees <<" rupees."<< endl;
+    
+    return 0;
+}
