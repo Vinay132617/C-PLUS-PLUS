@@ -1,0 +1,93 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int counter{10};
+    int result{0};
+    
+    // example 1 - Simple increment
+    
+    cout<<"SIMPLE INCREMENT"<<endl;
+    cout<<counter<<endl;  // 10
+    
+    counter = counter + 1;
+    cout<<counter<<endl;   // 11 
+    
+    counter++;
+    cout<<counter<<endl;  // 12
+    
+    ++counter;
+    cout<<counter<<endl;  //13
+    
+    cout<<"==========================================="<<endl;
+    
+    // example 2 - pre-increment
+    
+    cout<<"PRE-INCREMENT"<<endl;
+    
+    counter = 10;
+    result = 0;
+    
+    cout<<counter<<endl; //10
+    
+    result= ++counter;  // firstly counter is incremented and then incremented counter is assigned to result
+    
+    cout<<counter<<endl;  //11
+    cout<<result<<endl;   //11
+    
+    cout<<"==========================================="<<endl;
+    
+    // Example 3 - post-increment
+    
+    cout<<"POST-INCREMENT"<<endl;
+    
+    counter = 10;
+    result = 0;
+    
+    cout<<counter<<endl; //10
+    
+    result = counter++;  // firstly counter is assigned to result and then counter is incremented
+    
+    cout<<counter<<endl; //11
+    cout<<result<<endl;  //10
+    
+    cout<<"==========================================="<<endl;
+    
+    // Example 4
+    
+    cout<<"EXMPLE 4 (pre-increment)"<<endl;
+    
+    counter = 10;
+    result = 0;
+    
+    cout<<counter<<endl;
+    
+    result = ++counter + 10; //first counter is incremented and then 10 is added and atlast result 
+    
+    cout<<counter<<endl;
+    cout<<result<<endl;
+    
+    cout<<"==========================================="<<endl;
+    
+    //Example 5
+    
+    cout<<"EXAMPLE 5 (post-increment)"<<endl;
+    
+    counter = 10;
+    result = 0;
+    
+    cout<<counter<<endl;
+    
+    result = counter++ + 10; //first 10 is added to counter then value is assigned to result and atlast counter is incremented
+    
+    cout<<counter<<endl;
+    cout<<result<<endl;
+    
+    return 0;
+    
+    
+    
+}
+    
