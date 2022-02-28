@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    cout<<"SWEATER PROGRAM WHETHER TO WEAR OR NOT DEPENDING ON WIND AND TEMPERATURE"<<endl<<endl;
+    
+    int temperature{0},windspeed{0};
+    
+    cout<<"WELCOME TO THE VINAYS SWEATER PROGRAM"<<endl;
+    
+    cout<<"Enter the temperature in c : ";
+    cin>>temperature;
+    
+    cout<<"Enter the speed of wind in kph: ";
+    cin>>windspeed;
+    
+    const int windspeed_to_wear{4};
+    const int temperature_to_wear{20};
+    bool wear{false};
+    
+    cout<<boolalpha;
+    
+    wear = temperature <= temperature_to_wear || windspeed >= windspeed_to_wear;
+    cout<<"Do you need to wear sweater (or)? : "<<wear<<endl;
+    
+    wear = temperature <= temperature_to_wear && windspeed >= windspeed_to_wear;
+    cout<<"Do you need to wear sweater (and)? : "<<wear<<endl;
+    
+ 
+}
