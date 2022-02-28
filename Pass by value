@@ -1,0 +1,67 @@
+// PASS_BY_VALUE
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+
+
+void pass_by_value1(int a);
+void pass_by_value2(string b);
+void pass_by_value3(vector<int> c);
+void print_vec(const vector<int> c);
+
+
+int main()
+{
+    cout<<"\n-------PASS-BY-VALUE-------"<<endl<<endl;
+    
+    int num{12};
+    int another_num{24};
+    
+    cout<<"num before calling pass by vakue 1 : "<<num<<endl;
+    pass_by_value1(num);
+    cout<<"num after calling pass by value 1 : "<<num<<endl<<endl;
+    
+    cout<<"another num before calling pass by value 1 : "<<another_num<<endl;
+    pass_by_value1(another_num);
+    cout<<"another num after calling pass by value 1 : "<<another_num<<endl<<endl;   
+    
+    string abc{"Vinay"};
+    cout<<"String abc before calling pass by value2 : "<<abc<<endl;
+    pass_by_value2(abc);
+    cout<<"String abc after calling pass by value2 : "<<abc<<endl<<endl;
+    
+    vector<int> pqr{1,2,3,4,5};
+    cout<<"vector PQR before calling pass by value3 : ";
+    print_vec(pqr);
+    pass_by_value3(pqr);
+    cout<<"Vector PQR after calling pass by value3 : ";
+    print_vec(pqr);
+}
+
+
+void pass_by_value1(int a)
+{
+  a = 100;  
+}
+
+void pass_by_value2(string b)
+{
+    b = "Changed";
+}
+
+void pass_by_value3(vector<int> c)
+{
+    c.clear();
+}
+
+void print_vec(const vector<int> c)
+{
+    for(auto z: c)
+        cout<<z<<" ";
+    cout<<endl;
+}
+
+
