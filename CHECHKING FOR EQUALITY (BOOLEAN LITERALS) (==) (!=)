@@ -1,0 +1,69 @@
+//CHECHKING FOR EQUALITY (BOOLEAN LITERALS) (==) (!=)
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    bool result{};
+    bool result2{};
+    const int num1{10}, num2{50+50};
+    
+    result = (num1 == num2);
+    result2 = (num1 != num2);
+    
+    cout<<boolalpha;                 // PRINTS RESULT IN TRUE OR FALSE
+    cout<<result<<endl;
+    cout<<result2<<endl<<endl;
+    
+    cout<<noboolalpha;              // RETURNS TO NORMAL 0 AND 1 RESULT
+    cout<<result<<endl;
+    cout<<result2<<endl;
+    
+    cout<<"============================================"<<endl;
+    bool equal_result{};
+    bool not_equal_result;
+    
+    cout<<boolalpha;
+    
+    int number1{}, number2{};
+    cout<<"COMPARING INTEGERS"<<endl<<endl;
+    cout<<"Enter Two Numbers : ";
+    cin>>number1>>number2;
+    equal_result = (number1 == number2);
+    not_equal_result = (number1 != number2);
+    cout<<"comparison result (equal) : "<<equal_result<<endl;
+    cout<<"comparison result (not equal) : "<<not_equal_result<<endl;
+    cout<<"============================================"<<endl;
+    
+    double double1{}, double2{};
+    cout<<"COMPARING DOUBLES"<<endl<<endl;
+    cout<<"Enter Two Double Numbers : ";
+    cin>>double1>>double2;
+    equal_result = (double1 == double2);
+    not_equal_result = (double1 != double2);
+    cout<<"comparison result (equal) : "<<equal_result<<endl;
+    cout<<"comparison result (not equal) : "<<not_equal_result<<endl;
+    cout<<"============================================"<<endl;
+    
+    char char1{}, char2{};
+    cout<<"COMPARING CHARACTERS"<<endl<<endl;
+    cout<<"Enter Two characters : ";
+    cin>>char1>>char2;
+    equal_result = (char1 == char2);
+    not_equal_result = (char1 != char2);
+    cout<<"comparison result (equal) : "<<equal_result<<endl;
+    cout<<"comparison result (not equal) : "<<not_equal_result<<endl;
+    cout<<"============================================"<<endl;
+    
+    cout<<"COMPARING INTEGER AND DOUBLE"<<endl<<endl;
+    cout<<"Enter integer and double respectively : ";
+    cin>>number1>>double1;
+    equal_result = (number1 == double1);
+    not_equal_result = (number1 != double1);
+    cout<<"comparison result (equal) : "<<equal_result<<endl;
+    cout<<"comparison result (not equal) : "<<not_equal_result<<endl;
+    
+    
+}
