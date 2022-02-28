@@ -1,0 +1,54 @@
+//DEREFERENCING POINTER(*)
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    int score {100};
+    
+    cout<<"DEREFERENCING POINTER(*)"<<endl;
+    
+    
+    int *score_ptr{&score};
+    
+    cout<<*score_ptr<<endl;
+    
+    *score_ptr = 200;
+    
+    cout<<*score_ptr<<endl;
+    cout<<score<<endl;
+    
+    cout<<"--------------------------------"<<endl;
+    
+    double htemp{100.7};
+    double ltemp{80.9};
+    
+    double *ptr_temp{&htemp};
+    
+    cout<<*ptr_temp<<endl;
+    
+    *ptr_temp = ltemp;
+    
+    cout<<*ptr_temp<<endl;
+    
+    cout<<"--------------------------------"<<endl;
+    
+    string name{"Vinay"};
+    
+    string *ptr{&name};
+    
+    cout<<*ptr<<endl;
+    
+    name = "kishor";
+    
+    cout<<*ptr<<endl;
+    
+    
+    
+}
+
+
+
+
