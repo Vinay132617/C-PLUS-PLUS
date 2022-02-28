@@ -1,0 +1,53 @@
+// ACCESSING POINTER ADDRESS
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    int num{10};
+    
+    cout<<"ACCESSING POINTER ADDRESS"<<endl;
+    cout<<"-------------------------"<<endl;
+    
+    cout<<"value of num is : "<<num<<endl;
+    cout<<"Sizeof of num is : "<<sizeof num<<endl;
+    cout<<"address of num is : "<<&num<<endl;
+    cout<<"-------------------------"<<endl;
+    
+    
+    int *p;
+    
+    cout<<"value of p is : "<<p<<endl;
+    cout<<"Sizeof of p is : "<<sizeof p<<endl;
+    cout<<"address of p is : "<<&p<<endl;
+    
+    p = nullptr;
+    cout<<"num1 is : "<<p<<endl;
+    cout<<"-------------------------"<<endl;
+    
+    int *p1{nullptr};
+    double *p2{nullptr};
+    unsigned long long *p3{nullptr};
+    vector<string> *p4{nullptr};
+    string *p5{nullptr};
+    
+    cout<<"Sizeof of p1 is : "<<sizeof p1<<endl;
+    cout<<"Sizeof of p2 is : "<<sizeof p2<<endl;
+    cout<<"Sizeof of p3 is : "<<sizeof p3<<endl;
+    cout<<"Sizeof of p4 is : "<<sizeof p4<<endl;
+    cout<<"Sizeof of p5 is : "<<sizeof p5<<endl;
+    cout<<"-------------------------"<<endl;
+    
+    int score{10};
+    double temp{80.4};
+    
+    int *pointer_score{nullptr};
+    
+    pointer_score = &score;
+    
+    cout<<"value of score is : "<<score<<endl;
+    cout<<"value of score pointer is : "<< pointer_score<<endl;
+    cout<<"address of score is : "<<&score<<endl;
+}
