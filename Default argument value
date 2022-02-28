@@ -1,0 +1,32 @@
+// Example program
+#include <iostream>
+#include<iomanip>
+
+using namespace std;
+
+double cal_cost(double basecost = 100.0, double taxrate = 0.06 ,double shipping = 3.50);     //PROTOTYPE
+
+double cal_cost(double basecost, double taxrate ,double shipping)
+{
+    return basecost = basecost + (basecost * taxrate) + shipping;    
+}
+
+int main()
+{
+    double cost{0};
+    
+    cout<<fixed<<setprecision(2);
+    
+    cost = cal_cost(200.0,0.08,4.50);                 //WILL USE NO DEFAULTS
+    cout<<"the cost is : "<<cost<<endl<<endl;
+    
+    cost = cal_cost(200.0,0.08);                      //WILL USE SHIPPING AS DEFAULT FROM PROTOTYPE
+    cout<<"the cost is : "<<cost<<endl<<endl;
+    
+    cost = cal_cost(200.0);                           //WILL USE TAXRATE AND SHIPPING AS DEFAULT FROM PROTOTYPE
+    cout<<"the cost is : "<<cost<<endl<<endl;
+    
+    cost = cal_cost();                                //WILL USE EVERYTHING AS DEFAULT FROM PROTOTYPE
+    cout<<"the cost is : "<<cost<<endl<<endl;
+    
+}
