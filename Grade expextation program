@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char grade{};
+    
+    cout<<"Enter the grade you expect in the exam : ";
+    cin>>grade;
+    
+    switch(grade)
+    {
+        case 'a':
+        case 'A':
+            cout<<"You need to score 90 or above for A. Study hard!"<<endl;
+            break;
+        case 'b':
+        case 'B':
+            cout<<"you need to score in between 80 to 89 for B. Go study!"<<endl;
+            break;
+        case 'c':
+        case 'C':
+            cout<<"you need to score in between 70 to 79 for average grade C."<<endl;
+            break;
+        case 'd':
+        case 'D':
+            cout<<"you must strive for the better grade. All you need to score is 60 to 69."<<endl;
+            break;
+        case 'f':
+        case 'F':
+        {
+            char confirm{};
+            
+            cout<<"Are you sure (Y/N)? ";
+            cin>>confirm;
+            
+            if (confirm == 'Y' || confirm == 'y')
+                cout<<"Ok, i guess you dont wanna study! you need to score 50 to 59 for F. "<<endl;
+            else if(confirm == 'N' || confirm == 'n')
+                cout<<"Good, go study hard! "<<endl;
+            else
+                cout<<"Illegal choice!!"<<endl;
+         break;
+        }
+        default:
+            cout<<"not a valid grade.."<<endl;
+    }
+   
+
+    return 0;
+}
