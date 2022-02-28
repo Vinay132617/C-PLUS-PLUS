@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    const int target{10};
+    int num{0};
+    
+    
+    cout <<"Enter the number nearing target : ";
+    cin>>num;
+    
+    if(num > target)
+    {
+        cout<<"=======statement1=========="<<endl;
+        cout<<num<<" is greater than "<<target<<"."<<endl;
+        int diff{num - target};
+        cout<<num<<" is "<<diff<<" greater than "<<target<<"."<<endl;
+    }
+    
+    else if(num < target)
+    {
+        cout<<"=======statement2=========="<<endl;
+        cout<<num<<" is less than "<<target<<"."<<endl;
+        int diff{target - num};
+        cout<<num<<" is "<<diff<<" less than the " <<target<<"."<<endl;    
+    }
+    
+    else 
+    {
+       cout<<"=======statement3=========="<<endl; 
+       cout<<num<<" is on the target "<<target<<"."<<endl;
+    }
+    
+}
