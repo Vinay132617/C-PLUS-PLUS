@@ -1,0 +1,31 @@
+// Example program
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    //integer
+    int integers[] {10,101,1001,10001,100001};
+    
+    for(auto integ: integers)
+        cout<<integ<<endl;
+    cout<<"=============================="<<endl;
+     // double
+    vector<double>temp{12.2,13.4,12.3,15.6};
+    double avgtemp{};
+    double total{};
+    
+    for (auto t: temp)
+        total += t;
+    
+    avgtemp = total/temp.size();
+    
+    cout<<total<<"   "<<avgtemp<<endl;
+    cout<<"=============================="<<endl;
+   //string 
+    for(auto str: "hey buddy")
+        cout<<str;
+}
