@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char name[]{'v','i','n','a','y'};
+    
+    cout<<"The first letter of name : "<<name[0]<<endl;
+    cout<<"The third letter of name : "<<name[2]<<endl;
+    
+    double scores[]{9.8,8.8,7.4,9.3,10.0};
+    
+    cout<<"The score of first student : "<<scores[0]<<endl;
+    
+    scores[0] = 9.2;
+    
+    cout<<"new score of first student : "<<scores[0]<<endl;
+    
+}
