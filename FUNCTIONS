@@ -1,0 +1,44 @@
+#include<iostream>
+
+using namespace std;
+
+const double pi {3.14159};
+
+double cal_area_circle(double radius){                             //FUNCTION CALCULATES THE AREA OF CIRCLE
+    
+    return pi*radius*radius;    
+
+}
+
+void area_circle(){                                                  //THIS FUNCTION AKS USER FOR RADIUS OF CIRCLE
+    double radius{};
+    
+    cout<<"Enter the radius of the circle : ";
+    cin>>radius;
+    
+    cout<<"The area of the circle with the radius "<<radius<<" is : "<<cal_area_circle(radius)<<endl;     //AREA OF CIRCLE FUNCTION IS CALLED
+    cout<<"------------------------------"<<endl<<endl;
+}
+
+double cal_volume_cylinder(double radius, double height){                //FUNCTION CALCULATES THE VOLUME OF THE CYLINDER
+    
+    return pi*radius*radius*height;    
+}
+
+void volume_cylinder(){
+    
+    double height{};
+    double radius{};
+    
+    cout<<"Enter the radius and the height of the cylinder seperated by the space :  ";         // ASKS FOR RADIUS AND THE HEIGHT
+    cin>>radius>>height;
+    
+    cout<<"The volume of the cylinder of height "<<height<< " and radius "<<radius<<" is: "<<cal_volume_cylinder(radius,height)<<endl;     //VOLUME OF CYLINDER FUNCTION IS CALLED 
+}
+
+int main()
+{
+   area_circle();
+   volume_cylinder();
+   return 0;
+}
