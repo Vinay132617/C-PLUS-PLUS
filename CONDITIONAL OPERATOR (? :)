@@ -1,0 +1,47 @@
+//CONDITIONAL OPERATOR (? :)
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num{0};
+    
+    cout<<"CHECKING THE NUMBER WHETHER IT IS ODD OR EVEN"<<endl<<endl;
+    cout<<"Enter the number : ";
+    cin>>num;
+    cout<<endl;
+    
+    cout<<"USING IF ELSE STATEMENT"<<endl;
+    
+    if(num % 2 == 0)
+        cout<<num<<" is Even."<<endl;
+    else
+        cout<<num<<" is odd."<<endl;
+    cout<<"========================================================"<<endl<<endl;
+        
+    cout<<"USING CONDITIONAL OPERATOR"<<endl;
+   
+    cout<<num<<" is "<< ((num % 2 == 0)? "Even." : "odd.")<<endl;
+    
+    cout<<"============================================================================="<<endl<<endl;
+    
+    int num1{},num2{};
+    
+    cout<<"COMPARING TWO NUMBERS OF INTEGER TYPE"<<endl<<endl;
+    
+    cout<<"Enter two numbers seperated by spaces : ";
+    cin>>num1>>num2;
+    
+    if(num1 != num2)
+    {
+        cout<<"The larger number : "<<((num1 > num2)? num1 : num2)<<endl;
+        cout<<"The smaller number : "<<((num1< num2)? num1 : num2)<<endl;
+    }
+    else
+        cout<<"Both numbers are same!!"<<endl;
+        
+
+    
+}
