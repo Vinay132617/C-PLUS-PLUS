@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    const int minimum{10};
+    const int maximum{100};
+    
+    int num{0};
+    
+    cout<<"Enter the number between "<<minimum<<" and "<<maximum<<" : ";
+    cin>>num;
+    
+    // Between min and max
+    
+    if (num > minimum && num < maximum)
+    {
+        cout<<"============STATEMENT1============"<<endl;
+        cout<<num<<" is between "<<minimum<<" and "<<maximum<<endl;
+        int diff{maximum - num};
+        cout<<num<<" is "<<diff<<" less than "<<maximum<<"."<<endl;
+    }
+    
+    // beyound min and max
+    if (num < minimum || num > maximum)
+    {
+        cout<<"============STATEMENT2============"<<endl;
+        cout<<num<<" is beyond "<<minimum<<" and "<<maximum<<endl;
+        int diff{maximum-num};
+        cout<<num<<" is "<<diff<<" less than " <<maximum<<"."<<endl;
+    }
+    
+    // On boundary 
+    if (num == minimum || num == maximum)
+    {
+        cout<<"============STATEMENT============"<<endl;
+        cout<<num<<" is on the boundary"<<endl;
+    }
+    
+    return 0;
+}
