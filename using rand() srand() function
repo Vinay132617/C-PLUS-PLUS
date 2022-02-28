@@ -1,0 +1,23 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+
+using namespace std;
+
+int main()
+{
+    int random_num{};
+    int min{1};
+    int max{8};
+    int count{10};
+    
+    cout<<"Random number on my system is: "<<RAND_MAX<<endl;
+    
+    srand(time(nullptr));
+    
+    for(int i{1}; i<=count ; ++i)
+    {
+        random_num = rand() % (max - min + 1) + min;   
+        cout<<random_num<<endl;
+    }
+}
